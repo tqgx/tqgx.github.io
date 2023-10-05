@@ -7,20 +7,33 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 ---
 
 <BaseLayout>
-  
-<div class="section-content" style="width:100%;">
   <section class="everydayfeed">
+
+              <div class="view-archive-wrapper">
+      <h1 class="section-head">Archive</h1>
+    <div style="text-align: center; font-size: 117px; margin-top: -15px; height: 0px; overflow-x:auto ; white-space: nowrap;">
+        <p="/" style="color: #D6D6D6;">Filter by tag:</a>&nbsp;&nbsp
+
+
+      </div>
+        <a href="/tags/SOFTWARE" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">SOFTWARE</a>
+              <a href="/tags/⚡ QUICK READ" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">⚡ QUICK READ</a>
+        <a href="/tags/TQGX" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">TQGX</a>
+
+  <section class="everydayfeed">
+      </ul><div class="section-content" style="width:1450px;">
 
         <ul role="list" class="section-tiles">
         {
           // tile-hero
           allPosts.slice(0, 9999).map((post) => {
             return (
-              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="2" />
             );
           })
         }
-      </ul>
+      </ul><div class="section-content" style="width:1450px;">
+
       <div class="view-archive-wrapper">
         <a href="/" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">Back</a>
       </div>
@@ -39,3 +52,22 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
     });
   </script>
 </BaseLayout>
+
+
+  <section class="everydayfeed">
+    <div class="section-content">
+
+
+
+
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
