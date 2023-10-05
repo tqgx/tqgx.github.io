@@ -4,53 +4,29 @@ import Navigation from "./Navigation.astro";
 
 
 <header>
-  <div style={{ background: "#333333", height: "40px", padding: "4px" }}>
+    <div class="navigation">
+
+  <div style={{ background: "#333333", height: "50px", padding: "4px" }}>
     <button type="button" class="hamburger">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
     <div class="menu">
-      <div style="text-align: center; font-size: 14px; margin-top: -16px; height: 40px; overflow-x: auto; white-space: nowrap;">
-        <a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: #D6D6D6;">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div style="text-align: left; font-size: 17px; margin-top: -24px; height: 80px; overflow-x: auto; white-space: nowrap;">
+<a href="/" style="text-decoration: none;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/62Ksu9x.png?raw=true" alt="" title="Hello! im Lily Joneś, a.k.a. TQGX OpenTools & Portabler" style="width: 130px; height: 50px;">
+</a>
+
+
+      <div style="text-align: center; font-size: 17px; margin-top: -45px; height: 40px; overflow-x: auto; white-space: nowrap;">
+        <a href="/" style="color: #D6D6D6;">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/archive" style="color: #D6D6D6;">ARCHIVE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/Tags" style="color: #D6D6D6;">TAGS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/en-us" style="color: #D6D6D6;">ENGLISH</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
       </div>
     </div>
   </div>
   <style>
-    .sticky-header {
-      position: relative;
-      transition: top 0.3s ease-in-out; /* 添加過渡效果，使切換固定時更平滑 */
-    }
-    .navigation {
-      position: fixed;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.6); /* 設置背景顏色為透明化的白色，根據需要進行調整 */
-    }
-    .sticky {
-      position: fixed;
-      top: 0;
-      z-index: 1; /* 將 z-index 設置為 1，以確保它在其他元素之上 */
-    }
-  </style>
-  <script>
-    window.addEventListener('scroll', function() {
-      var header = document.querySelector('.sticky-header');
-      var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  
-      if (scrollPosition > 0) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
-      }
-    });
-  </script>
-  <div class="sticky-header">
-    <div class="navigation">
-      <!-- 在這裡放置您的導航元素 -->
-      <Navigation />
-    </div>
-  </div>
-  
-  <!-- 在這裡添加一個空的區塊，以留出空間 -->
-  <div style="height: 40px;"></div>
-  
