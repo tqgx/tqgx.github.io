@@ -1,0 +1,147 @@
+a---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Tile from "../layouts/Tile.astro";
+import MoreTile from "../layouts/MoreTile.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+---
+
+<BaseLayout>
+  
+  
+  
+    <div class="section-content">
+<img src="https://tqgx.github.io/preview.png"
+
+          <div class="component">
+          
+                 <h1 style="text-align: center">你好！歡迎來到我的介紹</h1>        
+          <hr>        
+                  <p>我叫Lily Joneś，我在網路上的名字是（TQGX）我主要是做軟件分享，負責<a href="https://github.com/tqgx/OpenTools" >OpenTools</a> 項目，偶爾我也會分享一些真正的便攜軟件（基於TurboSTudio、或是Thinapp製作的）這裡是我獨一無二的部落格，從來都沒有人看，連谷歌、微軟、都不想收錄我的博客:D，我是一位台灣人，但我不懂英語或是其他外來語言。所以我的座右銘就是，有好用的工具就使用它就對了，翻譯，翻譯在翻譯.... 
+                  你可能有在哪個地方看到我，我現在活躍在Gentoo Linux的Discord伺服器，是一個非常愚蠢的人。  
+                  <u><p><b>直到2023年的10月：我開始真正接觸Linux系統，在此之前我完全都在Windows 10的系統上，逛破解論壇，或是聊聊天，耍廢</b></p></u>你也可以說，我是一個Windows7的愛好者...，我有一段時間去逛俄羅斯論壇，那裡真的讓我大開眼界，所有人都想要用最精簡的軟體、開發一個軟件不能有太多垃圾或是檔愛太大，或是為了更新而更新的軟件。也是因為種種原因我就去嘗試了Windows7，這大概是在2022年10月尾聲的時候。這個時候我都一直在工作，上班。也對這個世界還是在認識當中，我在這個時間點對Linux這套系統真的徹底不熟。，我知道它，但是它不知道我是誰，我也對一些Linux命令行的畫面，感到勸退害怕、就一直躺在床上，思考到底要不要做，又躺在床上，在思考要不要做.... 就連TurboStudio也是這樣，就是有一種僵持已久猶豫的感覺（哎呀真是，我真的不能夠理解，有一些開發者為什麼要把軟件做的這麼勸退人XD）
+
+                 <h2> # 我的啟蒙：</h2>我有一段時間一直在逛 Rsload.net論壇，一個俄羅斯的破解論壇，裡面我記得很多人，海森叔叔（一個V怪客頭像的）、大王（論壇的主人Rufull）還有好多好多人我至今都不認識了，或著說我能說出名字，但完全想不到
+
+我叫Lily Joneś，我在網路上的名字是（TQGX）我主要是做軟件分享，負責 OpenTools 項目，偶爾我也會分享一些真正的便攜軟件（基於TurboSTudio、或是Thinapp製作的）這裡是我獨一無二的部落格，從來都沒有人看，連谷歌、微軟、都不想收錄我的博客:D，我是一位台灣人，但我不懂英語或是其他外來語言。所以我的座右銘就是，有好用的工具就使用它就對了，翻譯，翻譯在翻譯.... 你可能有在哪個地方看到我，我現在活躍在Gentoo Linux的Discord伺服器，是一個非常愚蠢的人。 
+
+<p> 有段時間我也去果核（ghxi）論壇留言，這也是這組github帳號大部分的粉絲來源。
+
+<h2> ## 如何找到我？</h2>
+<li>通常，你可以給我發 Email：lilyjones1999@hotmail.com 
+<li>或是直接搜索我的Discord名稱：tqgx
+<li> 或是直接到這裡找我也可以：<a href="https://discord.com/invite/gentoolinux">Discord—GentooLinux</a> 
+</li>
+
+<p>
+<h1> ### 常問問題：</h1>
+<h3> <p= style="color: purple;">＄ Windows 有什麼好工具推薦？ </h3>
+太多了，只有你想和不想了解，我現在半隻腳已經踏入Linux，只能透過我的一些記憶，來推薦工具囉我想偷懶，一個一個貼網址好累，在我的部落格基本上你可以找到我覺得不錯的工具，只是大部分在 Windows上都是盜版軟件....在linux上一切都是免費的，只有想用跟不想用的差別。
+                
+                
+<h3> <p= style="color: purple;">＄ 推薦的Linux 系統？ </h3>
+基本上 Linux 系統，大部分安裝軟件都離不開命令行.... 對現在的我來說：只有多和少的差別，我覺得一開始接觸Linux，要選比較靈活，活潑的系統，才會讓你比較有堅持力。
+
+<ol>
+<li>
+<u> Archcraft — Arch Linux 的魔改版，足夠靈活、美觀！，最符合大家想像中的Linux美譽
+<li>
+Parrot OS — 一套基於Debian 預設配置好安全的系統，就像在 Windows 上，適合作為主機使用！
+<li>
+Xenia Linux — 基於Gentoo的發行版，以高度精簡為主＋不可變
+<li>
+Tails OS — 連接 Tor 隱私安全高度安全，是LIVE CD（只能在usb啟動的系統）基於Debian，安全性在前面三個系統之上，為了Tor良身打造的系統，但不適合裝在硬碟
+<li>
+Linux Mint — 適合沈重老實派，但就像最前面所說的，已經配置好一切，所以會感到很無聊。基於Debian
+<li>
+Fyde OS — 有觸控屏幕絕對要嘗試看看，完全就像手機上的體驗，基於Chrome OS的系統
+</ol></u>
+<b>後話：Linux在軟件上，廣泛有最良好支援的是Debian、再來是Fedora、再來才是Arch、Gentoo系統。</b>
+我建議新手先從基於Debian的系統開始玩玩看，當然Arch也可以...  我自己是選擇和Parrot OS共舞了，另外一台電腦則是Xenia Linux。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="square-frame">
+              <div class="comment-container">
+                <div class="comment-title">
+                </div>
+                <div class="comment-content">
+
+
+      </div>
+
+                  <h1 style="text-align: center">留言板</h1>
+                  <hr>
+
+                  <div id="utteranc" style="float: left; width: 50%;">
+                    <h1 style="text-align: left">Utteranc</h1>
+
+                    <h1 style="text-align: left">&emsp;</h1>
+                    <h1 style="text-align: left">&emsp;</h1>
+
+
+                    <script
+                    
+                      src="https://utteranc.es/client.js"
+                      repo="tqgx/netlify-tqgx-blog-comments1"
+                      issue-term="title"
+                      theme="github-light"
+                      crossorigin="anonymous"
+                      async
+                    ></script>
+                  </div>
+                  <div id="giscus" style="float: right; width: 50%;">
+                    <h1 style="text-align: right">Giscus</h1>
+
+                    <script src="https://giscus.app/client.js"
+                        data-repo="tqgx/netlify-tqgx-blog-comments"
+                        data-repo-id="R_kgDOKXazvQ"
+                        data-category="Announcements"
+                        data-category-id="DIC_kwDOKXazvc4CZksu"
+                        data-mapping="title"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="1"
+                        data-input-position="bottom"
+                        data-theme="preferred_color_scheme"
+                        data-lang="zh-CN"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
+                  </div>
+                  <div id="disqus_thread" style="clear: both; width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+          <div class="component">
+            <div id="disqus_thread"></div>
+            <div class="component-content">
+              <div class="article-copyright"> 
+                <img class="copyright-img" src="https://github.com/tqgx/tqgx/blob/main/TQGX/copyright.png?raw=true" alt="我的圖片" width="160" style="display: block; margin: 0 auto;">
+                <div class="cccopyright" style="padding:10px;margin:auto;font-size:16px;width:auto;text-align:center;:2px solid"><p>感謝您的閱讀。歡迎分享TQGX部落格(tqgx.github.io)的文章，引用轉載請上註明網址並遵守：<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh_TW" target="_blank" rel="noopener noreferrer">創用CC-姓名標示-非商業性-禁止改作 4.0 國際</a>授權條款。如需商業使用請來信告之。
+
+              </div>
+            </div>
+          </div>
+          <section class="more-from-newsroom">
+            <div class="section-content">
+</BaseLayout>
+      <div class="view-archive-wrapper">
+        <a href="/" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">Back</a>
+      </div>

@@ -26,7 +26,10 @@ export async function getStaticPaths() {
         <h2 class="tag-header">{tag}</h2>
         <div class="tag-post-list">{
         posts.length !== 0 ? <ArchivePostList posts={posts} /> : <div class="no-posts">暂无文章</div>}</div>
+      </div>      <div class="view-archive-wrapper">
+        <a href="/" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">Back</a>
       </div>
+
     </div>
   </section>
 </BaseLayout>
