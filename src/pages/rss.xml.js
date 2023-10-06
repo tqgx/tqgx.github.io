@@ -5,7 +5,7 @@ export async function get() {
     title: "TQGX 's Blog",
     description: "Hello! im Lily Joneś, a.k.a. TQGX OpenTools & Portabler",
     site: 'https://tqgx.github.io',
-    items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
+    items: await pagesGlobToRssItems(import.meta.glob('./posts/*.md')),
     customData: `<language>zh-cn</language>`,
   });
 }
