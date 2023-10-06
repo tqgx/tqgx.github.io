@@ -1,3 +1,4 @@
+
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Tile from "../layouts/Tile.astro";
@@ -5,6 +6,7 @@ import MoreTile from "../layouts/MoreTile.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 ---
+
 
 <BaseLayout>
   <section class="everydayfeed">
@@ -20,54 +22,23 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
               <a href="/tags/⚡ QUICK READ" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">⚡ QUICK READ</a>
         <a href="/tags/TQGX" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">TQGX</a>
 
-  <section class="everydayfeed">
-      </ul><div class="section-content" style="width:1450px;">
 
-        <ul role="list" class="section-tiles">
+
+    <div class="section-content">
+      <ul role="list" class="section-tiles">
+
+
         {
-          // tile-hero
-          allPosts.slice(0, 9999).map((post) => {
+          // tile-2up
+          allPosts.slice(0, 999).map((post) => {
             return (
-              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="2" />
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
             );
           })
         }
-      </ul><div class="section-content" style="width:1450px;">
 
-      <div class="view-archive-wrapper">
+      </div>      <div class="view-archive-wrapper">
         <a href="/" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">Back</a>
       </div>
 
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
-      var script = document.createElement("script");
-      script.src = "/static/js/animation.js";
-      document.head.appendChild(script);
-
-      script.onload = function () {
-        console.log("lazyload.js loaded");
-        // when layout is loaded, load the images
-        initImage();
-      };
-    });
-  </script>
 </BaseLayout>
-
-
-  <section class="everydayfeed">
-    <div class="section-content">
-
-
-
-
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      

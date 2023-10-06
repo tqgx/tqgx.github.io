@@ -1,3 +1,4 @@
+
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Tile from "../layouts/Tile.astro";
@@ -5,6 +6,7 @@ import MoreTile from "../layouts/MoreTile.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 ---
+
 
 <BaseLayout>
   <section class="everydayfeed">
@@ -20,48 +22,46 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
               <a href="/tags/⚡ QUICK READ" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">⚡ QUICK READ</a>
         <a href="/tags/TQGX" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">TQGX</a>
 
-  <section class="everydayfeed">
-      </ul><div class="section-content" style="width:1450px;">
 
-        <ul role="list" class="section-tiles">
+
+    <div class="section-content">
+      <ul role="list" class="section-tiles">
+
+    {
+          // tile-2up
+          allPosts.slice(0, 1).map((post) => {
+            return (
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="1" />
+            );
+          })
+        }
+
         {
           // tile-hero
-          allPosts.slice(0, 12).map((post) => {
+          allPosts.slice(2, 4).map((post) => {
             return (
               <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="2" />
             );
           })
         }
-      </ul><div class="section-content" style="width:1450px;">
+
+        {
+          // tile-2up
+          allPosts.slice(4, 10).map((post) => {
+            return (
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
+            );
+          })
+        }
 
   
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
-      var script = document.createElement("script");
-      script.src = "/static/js/animation.js";
-      document.head.appendChild(script);
-
-      script.onload = function () {
-        console.log("lazyload.js loaded");
-        // when layout is loaded, load the images
-        initImage();
-      };
-    });
-  </script>
-</BaseLayout>
-
-
-  <section class="everydayfeed">
-    <div class="section-content">
-
-
-
-
-      </div>
-                            <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/AI3.png?raw=true" alt="Image of a cat" class="section-content">
+            <div class="section-content">
+                <h2 class="section-head">ㅤ</h2>
+                
+                <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/AI3.png?raw=true" alt="Image of a cat" class="section-content">
                 <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/Gentoo1.png?raw=true" alt="Image of a cat" class="section-content">
                     <div class="view-archive-wrapper">
-        <a href="posts/16" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">View All</a>
+        <a href="/posts/16/" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">View All</a>
       </div>
 
                 <h2 class="section-head">ㅤ</h2>
@@ -70,7 +70,7 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 
         {
           // tile-2up
-          allPosts.slice(12, 24).map((post) => {
+          allPosts.slice(11, 17).map((post) => {
             return (
               <MoreTile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} />
             );
@@ -100,3 +100,4 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
       };
     });
   </script>
+</BaseLayout>

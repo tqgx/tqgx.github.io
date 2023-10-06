@@ -1,34 +1,172 @@
----
-import Navigation from "./Navigation.astro";
----
-
-
 <header>
-    <div class="navigation">
-
-  <div style={{ background: "#222233", height: "50px", padding: "4px" }}>
+  <div class="navigation">
     <button type="button" class="hamburger">
+<a href="/" style="text-decoration: none;">
+  <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/62Ksu9x.png?raw=true" alt="" title="Hello! im Lily Joneś, a.k.a. TQGX OpenTools & Portabler" style="width: 130px; height: 50px;">
+</a>
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
+    
     </button>
+
+
     <div class="menu">
-
-      <div style="text-align: left; font-size: 17px; margin-top: -28px; height: 80px; overflow-x: auto; white-space: nowrap;">
-<a href="/" style="text-decoration: none;">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/62Ksu9x.png?raw=true" alt="" title="Hello! im Lily Joneś, a.k.a. TQGX OpenTools & Portabler" style="width: 130px; height: 50px;">
-</a>
-
-      <div style="text-align: center; font-size: 17px; margin-top: -35px; height: 40px; overflow-x: auto; white-space: nowrap;">
-        <a href="/" style="color: #D6D6D6;">BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/archive" style="color: #D6D6D6;">ARCHIVE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/Tags" style="color: #D6D6D6;">TAGS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/en-us" style="color: #D6D6D6;">ENGLISH</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/About" style="color: #D6D6D6;">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+      <div class="fixed-menu-item">
       </div>
+      <ul role="list" class="menu-items">
+        <li class="menu-item">
+          <div class="js-menu-item">
+          &emsp;&emsp;&emsp;  <a href="/" style="text-align: center;">BLOG</a>
+          </div>
+        </li>
+        <li class="menu-item">
+          <div class="js-menu-item">
+            <a href="/archive">ARCHIVE</a>
+          </div>
+        </li>
+        <li class="menu-item">
+          <div class="js-menu-item">
+            <a href="/Tags">TAGS</a>
+          </div>
+        </li>
+        <li class="menu-item">
+          <div class="js-menu-item">
+            <a href="/en-us">ENGLISH</a>
+          </div>
+        </li>
+        <li class="menu-item">
+          <div class="js-menu-item">
+            <a href="/About">ABOUT</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  <style>
+</header>
+  <script>
+    // 初始化所有 `js-menu-item` 元素
+    const menuItems = document.querySelectorAll(".js-menu-item");
+
+    // 檢查螢幕尺寸
+    if (window.innerWidth >= 1) {
+      // 自動展開所有選項卡
+      for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "block";
+      }
+    } else {
+      // 隱藏所有選項卡
+      for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "none";
+      }
+    }
+
+
+
+    // 點擊 `.hamburger` 元素時顯示 `.js-menu-item` 元素
+    const hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function() {
+      for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+<script>
+  // 初始化所有 `js-menu-item` 元素
+  const menuItems = document.querySelectorAll(".js-menu-item");
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].style.display = "none";
+  }
+
+  // 點擊 `.hamburger` 元素時顯示 `.js-menu-item` 元素
+  const hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", function() {
+    for (let i = 0; i < menuItems.length; i++) {
+      menuItems[i].style.display = "block";
+    }
+  });
+
+  // 將 `img` 元素放在第一個位置
+  const img = document.querySelector(".menu-item > .js-menu-item > img");
+  menuItems[0].appendChild(img);
+</script>
+
+<style>
+.navigation {
+  background: #222233;
+  height: 50px;
+  padding: 4px;
+}
+
+.menu {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-item a {
+  color: #D6D6D6;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.hamburger-box {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hamburger-inner::before {
+  top: -8px;
+}
+
+.hamburger-inner::after {
+  top: 8px;
+}
+
+.fixed-menu-item {
+  display: inline-block;
+  position: absolute
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  
